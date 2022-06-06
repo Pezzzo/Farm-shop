@@ -3,6 +3,7 @@ import Title from "../../ui/title/title";
 import Button from "../../ui/button/button";
 import AdvantageCard from "../../ui/advantage-card/advantage-card";
 import { GridList } from "./styled";
+import { StyledLi } from "../../styled/li/styled";
 
 const AdvantageList = ({advantages}) => {
   return advantages && advantages.length ? (
@@ -10,9 +11,9 @@ const AdvantageList = ({advantages}) => {
       <Title>Почему фермерские продукты лучше?</Title>
       <GridList>
         {advantages.map((advant) => (
-          <li key={advant.id}>
+          <StyledLi key={advant.id}>
             <AdvantageCard {...advant} />
-          </li>
+          </StyledLi>
         ))}
       </GridList>
       <Button>Купить</Button>

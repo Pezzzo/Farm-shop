@@ -7,7 +7,7 @@ html {
 
 body,
 html {
-  margin: 0;
+  margin: 0 auto;
 }
 
 body {
@@ -18,6 +18,6 @@ body {
   max-width: ${(props) => props.theme.pageWidth};
   font-family: ${(props) => props.theme.fontFamily};
   font-size: ${(props) => props.theme.fontSizeDefault};
-  color: ${(props) => props.theme.colorBlack};
+  color: ${(props) => props.theme.colorBlackText};
 }
 `;
