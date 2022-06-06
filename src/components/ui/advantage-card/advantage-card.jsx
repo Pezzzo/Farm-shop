@@ -3,7 +3,7 @@ import Title from "../title/title";
 
 const AdvantageCard = ({title, type, about, image}) => {
   return (
-    <section>
+    <>
       <img
       width={56}
       height={56}
@@ -14,7 +14,7 @@ const AdvantageCard = ({title, type, about, image}) => {
         <Title>{title}</Title>
       </div>
       <p>{about}</p>
-    </section>
+    </>
   );
 };
 
