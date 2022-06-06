@@ -1,8 +1,8 @@
 import React from "react";
-import Title, {TitleSize} from "../../ui/title/title";
-import {AboutSection, Div} from "./styled";
+import Title, { TitleSize } from "../../ui/title/title";
+import { AboutSection, Div } from "./styled";
 
-function About( {level}) {
+const About = ({ level }) => {
   return (
     <AboutSection>
       <Div>

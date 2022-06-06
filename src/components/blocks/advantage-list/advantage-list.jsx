@@ -2,12 +2,12 @@ import React from "react";
 import Title from "../../ui/title/title";
 import Button from "../../ui/button/button";
 import AdvantageCard from "../../ui/advantage-card/advantage-card";
-import { GridList } from "./styled";
+import { GridList, AdvantageSection } from "./styled";
 import { StyledLi } from "../../styled/li/styled";
 
 const AdvantageList = ({advantages}) => {
   return advantages && advantages.length ? (
-    <section>
+    <AdvantageSection>
       <Title>Почему фермерские продукты лучше?</Title>
       <GridList>
         {advantages.map((advant) => (
@@ -17,7 +17,7 @@ const AdvantageList = ({advantages}) => {
         ))}
       </GridList>
       <Button>Купить</Button>
-    </section>
+    </AdvantageSection>
   ) : null;
 };
 
