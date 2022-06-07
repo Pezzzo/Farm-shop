@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { defaultTheme } from "../../../thems/default";
-
 import aboutFarmer from "../../../assets/Farmer.svg";
+import Title from "../../ui/title/title";
 
 export const AboutSection = styled.section`
 background-color: ${defaultTheme.colorLightBlue};
@@ -13,8 +13,43 @@ min-height: 600px;
 display: flex;
 align-items: center;
 margin-bottom: 100px;
+
+@media (max-width: 1200px) {
+  background-position: 620px 100%;
+  }
+
+@media (max-width: 1080px) {
+
+  background-position: 50% 100%;
+  display: block;
+  }
 `;
 
 export const Div = styled.div`
 max-width: 538px;
+
+@media (max-width: 1080px) {
+margin: 0 auto;
+padding-top: 40px;
+padding-bottom: 560px;
+}
+`;
+
+export const StyledTitle = styled.h1`
+@media (max-width: 768px) {
+  font-size: 36px;
+  line-height: 41px;
+}
+
+@media (max-width: 550px) {
+  font-size: 24px;
+  line-height: 31px;
+}
+`;
+
+export const P = styled.p`
+@media (max-width: 550px) {
+  font-size: 14px;
+  line-height: 18px;
+}
 `;

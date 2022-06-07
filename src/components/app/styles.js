@@ -20,4 +20,27 @@ body {
   font-size: ${(props) => props.theme.fontSizeDefault};
   color: ${(props) => props.theme.colorBlackText};
 }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+// 44-50, 36-41, 24-31, 18-27
+h1 {
+  font-size: 44px;
+  line-height: 50px;
+}
+h2 {
+  font-size: 36px;
+  line-height: 41px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 31px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 27px;
+}
 `;

@@ -1,23 +1,22 @@
 import React from "react";
-import Title from "../title/title";
-import { DivWrapper, Div1, Div2, Div3 } from "./styled";
+import { DivWrapper, Div1, Div2, StyledTitle, Img, Span, P } from "./styled";
 
 const AdvantageCard = ({ title, type, about, isNegative, image }) => {
   return (
     <DivWrapper isNegative={isNegative}>
       <Div1>
-      <Div2>
-        <img
-          width={56}
-          height={56}
-          src={image}
-          alt={title} />
-        <Div3>
-          <span>{type}</span>
-          <Title>{title}</Title>
-        </Div3>
-      </Div2>
-      <p>{about}</p>
+        <Div2>
+          <Img
+            width={56}
+            height={56}
+            src={image}
+            alt={title} />
+          <div>
+            <Span isNegative={isNegative}>{type}</Span>
+            <StyledTitle>{title}</StyledTitle>
+          </div>
+        </Div2>
+        <P>{about}</P>
       </Div1>
     </DivWrapper>
   );

@@ -8,5 +8,11 @@ right: 0;
 padding: 18px 90px;
 display: flex;
 justify-content: space-between;
-border-top: 1px solid rgba(0, 0, 0, 0.1)
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+@media (max-width: 900px) {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+}
 `;
