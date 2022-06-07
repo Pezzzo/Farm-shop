@@ -9,6 +9,7 @@ export const defaultTheme = {
   colorLightRed: '#f8ddd7',
   colorRed: '#f75531',
   colorOrange: '#fc9b27',
+  colorOrangeHover: '#fc7427',
   fontFamily: '"Inter", "Arial", sans-serif',
   fontSizeDefault: "18px",
   footerHeight: "80px",
