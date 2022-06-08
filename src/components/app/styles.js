@@ -3,10 +3,12 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 html {
   height: 100%;
+  background-color: ${(props) => props.theme.colorWhite}
 }
 
 body,
 html {
+
   margin: 0 auto;
 }
 
@@ -19,6 +21,7 @@ body {
   font-family: ${(props) => props.theme.fontFamily};
   font-size: ${(props) => props.theme.fontSizeDefault};
   color: ${(props) => props.theme.colorBlackText};
+  background-color: ${(props) => props.theme.colorGrey}
 }
 
 h1, h2, h3, h4 {

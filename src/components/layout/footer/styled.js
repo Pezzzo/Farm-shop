@@ -9,6 +9,7 @@ padding: 18px 90px;
 display: flex;
 justify-content: space-between;
 border-top: 1px solid rgba(0, 0, 0, 0.1);
+background-color: ${(props) => props.theme.colorWhite};
 
 @media (max-width: 900px) {
   flex-direction: column;
