@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { defaultTheme } from "../../../thems/default";
 
 export const NameOfShop = styled.span`
 display: block;
@@ -15,7 +14,7 @@ margin-left: 24px;
 
 export const Link = styled.a`
 text-decoration: none;
-color: ${defaultTheme.colorBlackText};
+color: ${(props) => props.theme.colorBlackText};
 display: flex;
 align-items: center;
 

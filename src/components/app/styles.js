@@ -1,11 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   background-color: ${(props) => props.theme.colorWhite}
 }
-
 body,
 html {
 
@@ -29,7 +32,7 @@ h1, h2, h3, h4 {
   padding: 0;
   font-weight: bold;
 }
-// 44-50, 36-41, 24-31, 18-27
+
 h1 {
   font-size: 44px;
   line-height: 50px;

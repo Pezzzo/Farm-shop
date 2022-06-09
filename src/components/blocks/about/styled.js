@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { defaultTheme } from "../../../thems/default";
 import aboutFarmer from "../../../assets/Farmer.svg";
-import Title from "../../ui/title/title";
 
 export const AboutSection = styled.section`
-background-color: ${defaultTheme.colorLightBlue};
+background-color: ${(props) => props.theme.colorLightBlue};
 background-image: url(${aboutFarmer});
 background-repeat: no-repeat;
 background-position: 744px 100%;
-padding-left: ${defaultTheme.pagePadding};
+padding-left: ${(props) => props.theme.pagePadding};
 min-height: 600px;
 display: flex;
 align-items: center;

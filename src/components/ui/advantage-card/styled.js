@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { defaultTheme } from "../../../thems/default";
 
 export const DivWrapper = styled.div`
 background-color: ${(props) => (props.isNegative ? '#f8ddd7' : '#e1edce')};
@@ -18,7 +17,7 @@ display: flex;
 `;
 
 export const Div1 = styled.div`
-padding: ${defaultTheme.indent} ${defaultTheme.indent} 0 ${defaultTheme.indent};
+padding: 20px 20px 0 20px;
 min-height: 200px;
 `;
 

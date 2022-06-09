@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { defaultTheme } from "../../../thems/default";
 
 export const NavButton = styled.button`
 position: relative;
-background-color: ${defaultTheme.colorOrange};
-color: ${defaultTheme.colorWhite};
+background-color: ${(props) => props.theme.colorOrange};
+color: ${(props) => props.theme.colorWhite};
 font-size: 18px;
 line-height: 27px;
 font-weight: 700;
@@ -14,7 +13,7 @@ cursor: pointer;
 
 &:hover,
 &:active {
-  background-color: ${defaultTheme.colorOrangeHover};
+  background-color: ${(props) => props.theme.colorOrangeHover};
   box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.14);
   }
 }

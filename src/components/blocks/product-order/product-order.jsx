@@ -1,27 +1,27 @@
 import React from "react";
-import { Section, FieldsetCheckbox, FieldsetOrder, FormButton } from "./styled";
+import { Section, FieldsetCheckbox, FieldsetOrder, FormButton, Title, TextInput, PriceText, Price, Form } from "./styled";
 
 const ProductOrder = () => {
   return (
     <Section>
-      <form>
+      <Form>
         <FieldsetCheckbox>
-          <h4>Выберите продукты</h4>
+          <Title>Выберите продукты</Title>
           <label>
             <span>продукт (чекбокс)</span>
             <input type="checkbox" name="" />
           </label>
         </FieldsetCheckbox>
         <FieldsetOrder>
-          <h4>Сделать заказ</h4>
+          <Title>Сделать заказ</Title>
           <label>
-            <input type="text" placeholder="Введите адрес доставки" />
-            <p>Цена</p>
-            <p>400 руб.</p>
+            <TextInput type="text" placeholder="Введите адрес доставки" />
+            <PriceText>Цена</PriceText>
+            <Price>400 руб.</Price>
             <FormButton>Купить</FormButton>
           </label>
         </FieldsetOrder>
-      </form>
+      </Form>
     </Section>
 
   );

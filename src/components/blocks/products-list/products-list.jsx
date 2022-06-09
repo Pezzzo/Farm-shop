@@ -1,13 +1,12 @@
 import React from "react";
-import { Section } from "./styled";
+import { Section, Wrapper } from "./styled";
 import ProductCart from "../../ui/product-cart/product-cart";
+import products from "../../../mocks/products";
 
 const ProductsList = () => {
   return (
     <Section>
-<ProductCart />
-<ProductCart />
-<ProductCart />
+      {products.map((product) => <ProductCart product={product} key={product.id}/>)}
     </Section>
 
   )

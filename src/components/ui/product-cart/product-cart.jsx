@@ -1,23 +1,23 @@
 import React from "react";
 import { StyledLi } from "../../styled/li/styled";
-import { CartWrapper, Img, P } from "./styled";
+import { CartWrapper, Img, Description, Price, TabsList, Tab, Title } from "./styled";
+import products from "../../../mocks/products";
 
-const ProductCart = () => {
+const ProductCart = ({ product }) => {
+
   return (
     <CartWrapper>
-        <Img src="https://i.ibb.co/QHNkcKM/Rectangle-2.png" alt="" />
       <div>
-        <h3>Филе бедра цыпленка</h3>
-        <ul>
+        <Img src={product.image} />
+        <Title>{product.name}</Title>
+        <TabsList>
           <StyledLi>
-            Описание
+            <Tab>Oписание</Tab>
+            <Description>{product.description}
+            </Description>
           </StyledLi>
-        </ul>
-        <P>Филе бедра без кожи и кости. Птица содержится в свободных птичниках,
-          выращивается на натуральных зерновых кормах, что влияет положительно на вкус мяса.
-          Филейная часть бедра обладает насыщенным вкусом и мясным ароматом.
-        </P>
-        <span>400 руб. / 700 гр.</span>
+        </TabsList>
+        <Price>{product.price} руб. / {product.weight} гр.</Price>
       </div>
     </CartWrapper>
   );
