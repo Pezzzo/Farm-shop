@@ -1,20 +1,13 @@
 import React from "react";
-import { Li, StyledUl, Section } from "./styled";
+import { Section } from "./styled";
+import ProductCart from "../../ui/product-cart/product-cart";
 
 const ProductsList = () => {
   return (
     <Section>
-      <StyledUl>
-        <Li>
-          карточка товара
-        </Li>
-        <Li>
-          карточка товара
-        </Li>
-        <Li>
-          карточка товара
-        </Li>
-      </StyledUl>
+<ProductCart />
+<ProductCart />
+<ProductCart />
     </Section>
 
   )

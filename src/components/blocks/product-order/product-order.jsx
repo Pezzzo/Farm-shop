@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "../../ui/button/button";
-import { Section, FieldsetCheckbox, FieldsetOrder } from "./styled";
+import { Section, FieldsetCheckbox, FieldsetOrder, FormButton } from "./styled";
 
 const ProductOrder = () => {
   return (
@@ -19,7 +18,7 @@ const ProductOrder = () => {
             <input type="text" placeholder="Введите адрес доставки" />
             <p>Цена</p>
             <p>400 руб.</p>
-            <Button>Купить</Button>
+            <FormButton>Купить</FormButton>
           </label>
         </FieldsetOrder>
       </form>
