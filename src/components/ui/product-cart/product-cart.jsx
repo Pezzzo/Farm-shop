@@ -1,26 +1,37 @@
 import React from "react";
-import { StyledLi } from "../../styled/li/styled";
-import { CartWrapper, Img, Description, Price, TabsList, Tab, Title } from "./styled";
-import products from "../../../mocks/products";
+import { CartWrapper, Img, Price, P, Title, TabsWrapper } from "./styled";
+import Tabs from "../tabs/tabs";
+import TabsContent from "../tabs-content/tabs-content";
+
 
 const ProductCart = ({ product }) => {
 
+  const tabsList = [
+    {
+      title: "Oписание",
+      content: <P>{product.description}</P>
+    },
+    {
+      title: "Характеристики",
+      content: <TabsContent data={product.specifications} />
+    },
+    {
+      title: "Свойства",
+      content: <TabsContent data={product.structure} />
+    }
+  ];
+
   return (
     <CartWrapper>
-      <div>
-        <Img src={product.image} />
+      <Img src={product.image} />
+      <TabsWrapper>
         <Title>{product.name}</Title>
-        <TabsList>
-          <StyledLi>
-            <Tab>Oписание</Tab>
-            <Description>{product.description}
-            </Description>
-          </StyledLi>
-        </TabsList>
+        <Tabs dataList={tabsList} />
         <Price>{product.price} руб. / {product.weight} гр.</Price>
-      </div>
+      </TabsWrapper>
     </CartWrapper>
   );
 }
 
 export default ProductCart;
+

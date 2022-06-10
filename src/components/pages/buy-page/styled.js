@@ -13,5 +13,6 @@ padding: 40px 90px 0 90px ;
 @media (max-width: 768px) {
   grid-template-columns: 1fr;
   padding: 20px 20px ;
+  position: relative;
 }
 `;
