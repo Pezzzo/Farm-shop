@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import { CartWrapper, Img, Price, P, Title, TabsWrapper } from "./styled";
 import Tabs from "../tabs/tabs";
 import TabsContent from "../tabs-content/tabs-content";
 
 
-const ProductCart = ({ product }) => {
+
+const ProductCart = React.forwardRef(( {product, getId}, ref ) => {
 
   const tabsList = [
     {
@@ -21,17 +22,18 @@ const ProductCart = ({ product }) => {
     }
   ];
 
-  return (
+  return (<>
     <CartWrapper>
-      <Img src={product.image} />
+      <Img src={product.image}  id={product.id} ref={ getId == product.id ? ref : null}/>
       <TabsWrapper>
         <Title>{product.name}</Title>
         <Tabs dataList={tabsList} />
         <Price>{product.price} руб. / {product.weight} гр.</Price>
       </TabsWrapper>
     </CartWrapper>
-  );
-}
+    </>
+  )
+});
 
 export default ProductCart;
 

@@ -1,8 +1,17 @@
 import styled from "styled-components";
 import { NavButton } from "../../ui/button/styled";
 
-export const Section = styled.section`
+export const SectionOrder = styled.section`
 grid-column: 1 / 2;
+`;
+
+export const SectionCard = styled.section`
+grid-column: 2 / 3;
+overflow-y: scroll;
+
+@media (max-width: 824px) {
+  grid-column: 1 / -1;
+}
 `;
 
 export const Form = styled.form`
@@ -11,13 +20,6 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
 }
-`;
-
-export const FieldsetCheckbox = styled.fieldset`
-background-color: ${(props) => props.theme.colorWhite};
-margin-bottom: 18px;
-border: 1px solid rgba(0, 0, 0, 0.1);
-padding: 24px 20px;
 `;
 
 export const FieldsetOrder = styled.fieldset`
@@ -32,11 +34,6 @@ padding: 24px 20px;
 
 export const FormButton = styled(NavButton)`
 width: 100%;
-`;
-
-export const Title = styled.h4`
-margin: 0;
-padding-bottom: 24px;
 `;
 
 export const TextInput = styled.input`
