@@ -5,7 +5,7 @@ import TabsContent from "../tabs-content/tabs-content";
 
 
 
-const ProductCart = React.forwardRef(( {product, getId}, ref ) => {
+const ProductCart = React.forwardRef(( {product, selectProductId}, ref ) => {
 
   const tabsList = [
     {
@@ -24,7 +24,7 @@ const ProductCart = React.forwardRef(( {product, getId}, ref ) => {
 
   return (<>
     <CartWrapper>
-      <Img src={product.image}  id={product.id} ref={ getId == product.id ? ref : null}/>
+      <Img src={product.image}  id={product.id} ref={ selectProductId == product.id ? ref : null}/>
       <TabsWrapper>
         <Title>{product.name}</Title>
         <Tabs dataList={tabsList} />

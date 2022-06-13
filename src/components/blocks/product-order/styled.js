@@ -26,6 +26,7 @@ export const FieldsetOrder = styled.fieldset`
 background-color: ${(props) => props.theme.colorWhite};
 border: 1px solid rgba(0, 0, 0, 0.1);
 padding: 24px 20px;
+margin: 0;
 
 @media (max-width: 768px) {
 
@@ -62,4 +63,9 @@ padding-bottom: 32px;
 font-size: 24px;
 line-height: 28px;
 font-weight: bold;
+`;
+
+export const Title = styled.h4`
+margin: 0;
+padding-bottom: 24px;
 `;

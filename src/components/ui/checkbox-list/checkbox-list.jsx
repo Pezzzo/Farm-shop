@@ -10,7 +10,7 @@ const CheckboxList = (props) => {
       <Title>
         Выберите продукты
       </Title>
-      {products.map((product) => <Checkbox product={product} key={product.id} onChange={props.updateChange}/>)}
+      {products.map((product) => <Checkbox product={product} key={product.id} onChange={props.updateChange} onClick={props.updateProducts}/>)}
     </FieldsetCheckbox>
   );
 }

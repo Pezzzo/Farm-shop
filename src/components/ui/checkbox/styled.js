@@ -5,7 +5,7 @@ export const Label = styled.label`
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 15px 20px;
+padding: 13px 20px 13px 0;
 `;
 
 export const Input = styled.input`
@@ -15,6 +15,7 @@ appearance: none;
 position: relative;
 border: 1px solid rgba(0, 0, 0, 0.1);
 cursor: pointer;
+background-color: ${(props) => props.theme.colorGrey};
 
 &:checked {
   background-color: ${(props) => props.theme.colorOrange};
