@@ -4,15 +4,16 @@ import { Label, Input, } from "./styled";
 
 const Checkbox = ({product, onChange, onClick }) => {
 
-  const handleSelectId = (event) => {
-    onChange(event.target.id);
-  };
 
   const handleProductId = (event) => {
     if (event.target.checked) {
-      onClick(product.price);
-    } else {
-      onClick(-product.price);
+      onChange(event.target.id);
+    }
+  };
+
+  const handleProduct = (event) => {
+    if (event.target.checked) {
+      onClick(product);
     }
   }
 
@@ -20,7 +21,7 @@ const Checkbox = ({product, onChange, onClick }) => {
     <>
       <Label>
         <span>{product.name}</span>
-       <Input type="checkbox" id={product.id} onChange={handleSelectId} onClick={handleProductId}/>
+       <Input type="checkbox" id={product.id} onChange={handleProductId} onClick={handleProduct}/>
 
       </Label>
     </>
