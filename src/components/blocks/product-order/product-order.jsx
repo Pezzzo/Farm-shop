@@ -8,39 +8,32 @@ const ProductOrder = () => {
 
   const cartRef = useRef();
 
-  const [productId, setProductId] = useState('');
-  const [selectProductsPrice, setSelectProductsPrice] = useState([]);
+  const [productId, setProductId] = useState("");
   const [selectedProducts, setSelectedProducts] = useState([]);
-  const [selectProduct, setSelectProduct] = useState('');
 
-
-  const handleSelectId = (productId) => {
-    setProductId(productId);
-  };
-  // console.log(productId);
-
-  const handleProduct = (selectProduct) => {
-    setSelectProduct(selectProduct);
-    setSelectProductsPrice([...selectProductsPrice, selectProduct.price]);
-    setSelectedProducts([...selectedProducts, selectProduct])
-  };
-  console.log(selectProductsPrice)
-  console.log(selectProduct)
-  console.log(selectedProducts)
-
-  const getUniqueId = (value, index, self) => {
-    return self.indexOf(value) === index;
+  const handleSelectId = (id) => {
+    setProductId(id);
   };
 
-  const uniqueIds = selectProductsPrice.filter(getUniqueId);
+  const handleProducts = (selectedProduct) => {
 
-  const fullPrice = selectProductsPrice.reduce(
-    (previousValue, currentValue) => previousValue += currentValue,
+    const arr = [...selectedProducts];
+
+    const index = arr.indexOf(selectedProduct);
+
+    if (~index) {
+      arr.splice(index, 1);
+    } else {
+      arr.push(selectedProduct);
+    }
+
+    setSelectedProducts([...arr]);
+  };
+
+  const fullPrice = selectedProducts.reduce(
+    (previousValue, currentValue) => (previousValue + currentValue.price),
     0
   );
-  // console.log(fullPrice)
-
-
 
   const [address, setAddress] = useState("");
   const handleBuyClick = () => {
@@ -52,7 +45,6 @@ const ProductOrder = () => {
     Доставка по адресу: ${address}.`);
   };
 
-
   useEffect(() => {
     if (cartRef.current) {
       cartRef.current.scrollIntoView({
@@ -62,13 +54,13 @@ const ProductOrder = () => {
     }
   }, [productId])
 
-  return (
+  return products && products.length ? (
     <>
       <SectionOrder>
         <Form>
           <CheckboxList
-            updateChange={handleSelectId}
-            updateProducts={handleProduct}
+            updateId={handleSelectId}
+            updateProducts={handleProducts}
           />
           <FieldsetOrder>
             <Title>Сделать заказ</Title>
@@ -80,7 +72,7 @@ const ProductOrder = () => {
                 placeholder="Введите адрес доставки" />
               <PriceText>Цена</PriceText>
               <Price>{fullPrice} руб.</Price>
-              <FormButton onClick={handleBuyClick}>Купить</FormButton>
+              <FormButton onClick={handleBuyClick} disabled={!selectedProducts.length || !address}>Купить</FormButton>
             </label>
           </FieldsetOrder>
         </Form>
@@ -89,6 +81,8 @@ const ProductOrder = () => {
         {products.map((product) => <ProductCart ref={cartRef} product={product} key={product.id} productId={productId} />)}
       </SectionCard>
     </>
+  ) : (
+    "Продукты были слишком вкусные и их разобрали."
   );
 }
 
