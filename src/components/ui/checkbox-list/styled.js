@@ -8,6 +8,10 @@ border: 1px solid rgba(0, 0, 0, 0.1);
 padding: 24px 20px 12px 20px;
 display: flex;
 flex-direction: column;
+
+@media (max-width: 768px) {
+  display: none;
+}
 `;
 
 export const Title = styled.h4`

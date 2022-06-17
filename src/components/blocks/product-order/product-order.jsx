@@ -1,8 +1,20 @@
 import React, { useRef, useState, useEffect } from "react";
+import "./scroll.css";
 import CheckboxList from "../../ui/checkbox-list/checkbox-list";
 import ProductCart from "../../ui/product-cart/product-cart";
 import products from "../../../mocks/products";
-import { SectionOrder, SectionCard, FieldsetOrder, FormButton, TextInput, PriceText, Price, Form, Title } from "./styled";
+import {
+  SectionOrder,
+  SectionCard,
+  FieldsetOrder,
+  FormButton,
+  TextInput,
+  PriceText,
+  Price,
+  Form,
+  Title,
+  ButtonUp
+} from "./styled";
 
 const ProductOrder = () => {
 
@@ -18,9 +30,7 @@ const ProductOrder = () => {
   const handleProducts = (selectedProduct) => {
 
     const arr = [...selectedProducts];
-
     const index = arr.indexOf(selectedProduct);
-
     if (~index) {
       arr.splice(index, 1);
     } else {
@@ -35,6 +45,16 @@ const ProductOrder = () => {
     0
   );
 
+  useEffect(() => {
+    if (cartRef.current) {
+      cartRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }, [productId])
+
+  // попап
   const [address, setAddress] = useState("");
   const handleBuyClick = () => {
     // eslint-disable-next-line no-alert
@@ -45,14 +65,25 @@ const ProductOrder = () => {
     Доставка по адресу: ${address}.`);
   };
 
+  // кнопка "наверх"
+  const handlerScrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+
+  const [scroll, setScroll] = useState(0);
+
+  const handleScroll = () => {
+    setScroll(window.scrollY);
+  };
+
   useEffect(() => {
-    if (cartRef.current) {
-      cartRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  }, [productId])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return products && products.length ? (
     <>
@@ -72,14 +103,31 @@ const ProductOrder = () => {
                 placeholder="Введите адрес доставки" />
               <PriceText>Цена</PriceText>
               <Price>{fullPrice} руб.</Price>
-              <FormButton onClick={handleBuyClick} disabled={!selectedProducts.length || !address}>Купить</FormButton>
+              <FormButton
+                onClick={handleBuyClick}
+                disabled={!selectedProducts.length || !address}>
+                Купить
+              </FormButton>
             </label>
           </FieldsetOrder>
         </Form>
       </SectionOrder>
       <SectionCard>
-        {products.map((product) => <ProductCart ref={cartRef} product={product} key={product.id} productId={productId} />)}
+        {products.map((product) => <ProductCart
+          ref={cartRef}
+          product={product}
+          key={product.id}
+          productId={productId}
+          updateId={handleSelectId}
+          updateProducts={handleProducts} />)}
       </SectionCard>
+
+      <ButtonUp
+        onClick={handlerScrollUp}
+        className={scroll < 420 ? "hidden" : "show"}>
+        к оплате
+      </ButtonUp>
+
     </>
   ) : (
     "Продукты были слишком вкусные и их разобрали."

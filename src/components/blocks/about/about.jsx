@@ -1,5 +1,10 @@
 import React from "react";
-import { AboutSection, Div, StyledTitle, P } from "./styled";
+import {
+  AboutSection,
+  Div,
+  StyledTitle,
+  P
+} from "./styled";
 
 const About = () => {
   return (

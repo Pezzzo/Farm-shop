@@ -12,11 +12,12 @@ margin-left: 24px;
 }
 `;
 
-export const Link = styled.a`
+export const Div = styled.div`
 text-decoration: none;
 color: ${(props) => props.theme.colorBlackText};
 display: flex;
 align-items: center;
+cursor: pointer;
 
 @media (max-width: 768px) {
   padding-top: 7px;

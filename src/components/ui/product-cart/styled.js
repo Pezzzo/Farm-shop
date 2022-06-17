@@ -51,3 +51,14 @@ width: 100%;
   padding-top: 10px;
 }
 `;
+
+export const MobileCheckbox = styled.div`
+position: absolute;
+padding: 0;
+right: 0;
+bottom: 4px;
+
+@media (min-width: 768px) {
+  display: none;
+}
+`;

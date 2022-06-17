@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledButton } from "../../ui/button/styled";
 
 export const GridList = styled.ul`
 margin: 0;
@@ -12,7 +13,6 @@ padding-top: 64px;
 
 @media (max-width: 768px) {
   grid-template-columns: 1fr;
-
 }
 `;
 
@@ -33,4 +33,10 @@ export const StyledTitle = styled.h2`
   font-size: 24px;
   line-height: 31px;
 }
+`;
+
+export const ButtonAdvantage = styled(StyledButton)`
+width: 260px;
+margin: 0 auto;
+padding: 0;
 `;

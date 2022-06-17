@@ -1,11 +1,11 @@
 import React from "react";
-import { NavButton } from "./styled";
+import { StyledButton } from "./styled";
 
-const Button = ({children}) => {
+const Button = ({ children }) => {
   return (
-    <NavButton type="button">
-      {children}
-    </NavButton>
+      <StyledButton>
+        {children}
+      </StyledButton>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Checkbox from "../checkbox/checkbox";
 import products from "../../../mocks/products";
 import { FieldsetCheckbox, Title } from "./styled";

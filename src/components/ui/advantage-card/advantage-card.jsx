@@ -1,7 +1,21 @@
 import React from "react";
-import { DivWrapper, Div1, Div2, StyledTitle, Img, Span, P } from "./styled";
+import {
+  DivWrapper,
+  Div1,
+  Div2,
+  StyledTitle,
+  Img,
+  Span,
+  P
+} from "./styled";
 
-const AdvantageCard = ({ title, type, about, isNegative, image }) => {
+const AdvantageCard = ({
+  title,
+  type,
+  about,
+  isNegative,
+  image
+}) => {
   return (
     <DivWrapper isNegative={isNegative}>
       <Div1>

@@ -7,6 +7,7 @@ left: 0;
 right: 0;
 padding: 18px 90px;
 display: flex;
+align-items: center;
 justify-content: space-between;
 border-top: 1px solid rgba(0, 0, 0, 0.1);
 background-color: ${(props) => props.theme.colorWhite};

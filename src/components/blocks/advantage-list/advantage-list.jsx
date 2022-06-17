@@ -1,21 +1,28 @@
 import React from "react";
-import Button from "../../ui/button/button";
 import AdvantageCard from "../../ui/advantage-card/advantage-card";
-import { GridList, AdvantageSection, StyledTitle } from "./styled";
 import { StyledLi } from "../../styled/li/styled";
+import ButtonLink from "../../ui/button-link/button-link";
+import {
+  GridList,
+  AdvantageSection,
+  StyledTitle,
+  ButtonAdvantage
+} from "./styled";
 
-const AdvantageList = ({advantages}) => {
+const AdvantageList = ({ advantages }) => {
   return advantages && advantages.length ? (
     <AdvantageSection>
       <StyledTitle>Почему фермерские продукты лучше?</StyledTitle>
       <GridList>
-        {advantages.map((advant) => (
-          <StyledLi key={advant.id}>
-            <AdvantageCard {...advant} />
+        {advantages.map((item) => (
+          <StyledLi key={item.id}>
+            <AdvantageCard {...item} />
           </StyledLi>
         ))}
       </GridList>
-      <Button>Купить</Button>
+      <ButtonAdvantage>
+        <ButtonLink>Купить</ButtonLink>
+      </ButtonAdvantage>
     </AdvantageSection>
   ) : null;
 };

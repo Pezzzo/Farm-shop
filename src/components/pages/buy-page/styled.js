@@ -11,6 +11,7 @@ column-gap: 20px;
 padding: 40px 90px 0 90px ;
 
 @media (max-width: 768px) {
+  top: 0;
   grid-template-columns: 1fr;
   padding: 20px 20px ;
   position: relative;

@@ -14,8 +14,11 @@ const Checkbox = ({ product, updateProducts, updateId }) => {
     <>
       <Label>
         <span>{product.name}</span>
-        <Input type="checkbox" id={product.id} onChange={handleProductId} onClick={() => updateProducts(product)} />
-
+        <Input
+          type="checkbox"
+          id={product.id}
+          onChange={handleProductId}
+          onClick={() => updateProducts(product)} />
       </Label>
     </>
   );

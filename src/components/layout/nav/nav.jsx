@@ -1,10 +1,11 @@
 import React from "react";
-import Button from "../../ui/button/button";
+import ButtonLink from "../../ui/button-link/button-link";
+
 
 const Nav = () => {
   return (<>
     <nav>
-      <Button>Купить</Button>
+      <ButtonLink></ButtonLink>
     </nav>
   </>);
 };
