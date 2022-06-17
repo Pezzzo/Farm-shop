@@ -9,6 +9,7 @@ margin-left: 24px;
 
 @media (max-width: 768px) {
   font-size: 18px;
+  text-align: center;
 }
 `;
 
@@ -21,6 +22,7 @@ cursor: pointer;
 
 @media (max-width: 768px) {
   padding-top: 6px;
-  padding-bottom:0;
+  padding-bottom: 10px;
+  justify-content: center;
 }
 `;

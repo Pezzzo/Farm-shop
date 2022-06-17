@@ -17,10 +17,14 @@ margin-bottom: 100px;
   }
 
 @media (max-width: 1080px) {
-
   background-position: 50% 100%;
   display: block;
   }
+
+@media (max-width: 768px) {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 `;
 
 export const Div = styled.div`

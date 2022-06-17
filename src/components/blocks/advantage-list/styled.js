@@ -21,6 +21,12 @@ text-align: center;
 padding-bottom: 180px;
 padding-left: 80px;
 padding-right: 80px;
+
+@media (max-width: 768px) {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+}
 `;
 
 export const StyledTitle = styled.h2`

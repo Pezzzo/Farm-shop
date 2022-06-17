@@ -17,7 +17,7 @@ padding: 40px 90px 0 90px ;
 @media (max-width: 768px) {
   top: 0;
   grid-template-columns: 1fr;
-  padding: 20px 20px 80px 20px;
+  padding: 20px 10px 80px 10px;
   position: relative;
 }
 `;

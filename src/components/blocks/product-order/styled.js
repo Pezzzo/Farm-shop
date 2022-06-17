@@ -13,7 +13,7 @@ grid-column: 1 / 2;
 export const SectionCard = styled.section`
 grid-column: 2 / 3;
 overflow-y: scroll;
-min-width: 320px;
+
 
 @media (max-width: 768px) {
   grid-column: 1 / -1;

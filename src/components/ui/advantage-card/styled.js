@@ -18,7 +18,7 @@ display: flex;
 
 export const Div1 = styled.div`
 padding: 20px 20px 0 20px;
-min-height: 200px;
+min-height: 160px;
 `;
 
 export const StyledTitle = styled.h3`

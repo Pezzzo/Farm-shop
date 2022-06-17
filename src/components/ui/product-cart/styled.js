@@ -20,6 +20,11 @@ width: 248px;
 height: 248px;
 margin-right: 20px;
 float: left;
+
+@media (max-width: 768px) {
+  margin-right: 0;
+  object-fit: cover;
+}
 `;
 
 export const Title = styled.h3`
