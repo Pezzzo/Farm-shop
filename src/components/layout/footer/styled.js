@@ -15,6 +15,15 @@ background-color: ${(props) => props.theme.colorWhite};
 @media (max-width: 900px) {
   flex-direction: column;
   align-items: center;
-  padding: 10px 10px;
+  padding: 0 10px 10px 10px;
+}
+`;
+
+export const Span = styled.span`
+@media (max-width: 768px) {
+  font-size: 14px;
+  line-height: 10px;
+  padding-right: 20px;
+  margin-left: auto;
 }
 `;

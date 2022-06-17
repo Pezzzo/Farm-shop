@@ -10,6 +10,10 @@ grid-template-columns: 1fr 2fr;
 column-gap: 20px;
 padding: 40px 90px 0 90px ;
 
+@media (max-width: 900px) {
+  padding: 40px 60px 0 60px ;
+}
+
 @media (max-width: 768px) {
   top: 0;
   grid-template-columns: 1fr;

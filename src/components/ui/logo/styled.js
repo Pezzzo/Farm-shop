@@ -8,7 +8,7 @@ font-weight: bold;
 margin-left: 24px;
 
 @media (max-width: 768px) {
-  font-size: 22px;
+  font-size: 18px;
 }
 `;
 
@@ -20,7 +20,7 @@ align-items: center;
 cursor: pointer;
 
 @media (max-width: 768px) {
-  padding-top: 7px;
-  padding-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom:0;
 }
 `;

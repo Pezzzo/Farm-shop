@@ -1,12 +1,12 @@
 import React from "react";
 import Logo from "../../ui/logo/logo";
-import { StyledFooter } from "./styled";
+import { StyledFooter, Span } from "./styled";
 
 const Footer = () => {
   return (
     <StyledFooter>
       <Logo />
-      <span>Создано 2021</span>
+      <Span>Создано 2021</Span>
     </StyledFooter>
   );
 };
