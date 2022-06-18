@@ -13,7 +13,11 @@ import {
   Price,
   Form,
   Title,
-  ButtonUp
+  ButtonUp,
+  SelectedProductsDiv,
+  TitleSelectedProducts,
+  List,
+  ListItem
 } from "./styled";
 
 const ProductOrder = () => {
@@ -101,14 +105,25 @@ const ProductOrder = () => {
                 onChange={(e) => setAddress(e.target.value)}
                 type="text"
                 placeholder="Введите адрес доставки" />
-              <PriceText>Цена</PriceText>
-              <Price>{fullPrice} руб.</Price>
-              <FormButton
-                onClick={handleBuyClick}
-                disabled={!selectedProducts.length || !address}>
-                Купить
-              </FormButton>
             </label>
+            <SelectedProductsDiv>
+              <List>
+                <TitleSelectedProducts>Выбранные продукты:</TitleSelectedProducts>
+                {selectedProducts.map(
+                  (product) =>
+                    <ListItem>
+                      {product.name} - {product.price} руб.
+                    </ListItem>
+                )}
+              </List>
+            </SelectedProductsDiv>
+            <PriceText>Итоговая цена:</PriceText>
+            <Price>{fullPrice} руб.</Price>
+            <FormButton
+              onClick={handleBuyClick}
+              disabled={!selectedProducts.length || !address}>
+              Купить
+            </FormButton>
           </FieldsetOrder>
         </Form>
       </SectionOrder>

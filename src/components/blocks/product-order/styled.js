@@ -91,3 +91,28 @@ background:linear-gradient(to bottom, ${(props) => props.theme.colorOrangeHover}
   display: none;
 }
 `;
+
+export const SelectedProductsDiv = styled.div`
+margin-bottom: 10px;
+@media (min-width: 768px) {
+  display: none;
+}
+`;
+
+export const List = styled.ol`
+padding: 0;
+padding-left: 20px;
+margin: 0;
+font-size: 14px;
+`;
+
+export const TitleSelectedProducts = styled.h4`
+padding: 0;
+margin: 0;
+font-size: 16px;
+`;
+
+export const ListItem = styled.li`
+font-size: 14px;
+margin: 0;
+`;
